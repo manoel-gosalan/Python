@@ -13,8 +13,8 @@ media = (nota1 + nota2) / 2
 
 # ? Mostra as notas do Alunos
 print(f"Analisando o resultado do primeiro  e o segundo semestro do ALuno: {aluno}")
-print(f"Primeiro Semestre: {nota1} e Segundo Semestre: {nota2}")
-print(f"Sua media final é: {media}")
+print(f"Primeiro Semestre: {(nota1):.1f} e Segundo Semestre: {(nota2):.1f}")
+print(f"Sua media final é: {(media):.1f}")
 
 
 

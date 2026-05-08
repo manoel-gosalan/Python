@@ -21,7 +21,7 @@ print(f"O dobro de {numero} é: {numero*2}")
 print(f"O triplo de {numero} é: {numero*3}")
 
 # ? Mostrando a raiz quadrada
-print(f"A raiz quadrada de {numero} é: {sqrt(numero)}")
+print(f"A raiz quadrada de {numero} é: {sqrt(numero):.2f}")
 
 
 

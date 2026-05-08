@@ -2,15 +2,26 @@
 # ! Desafio 11 — Pintando Parede
 # ==================================================
 
+import math
+
 # --------------------------------------------------
 # ? Objetivo
-# Ler a largura e altura de uma parede e mostrar quantos litros de tinta são necessários para pintá-la
-# ? Sabendo que cada litro de tinta pinta uma área de 2 metros quadrados
+# Ler a largura e altura de uma parede e mostrar
+# quantos litros de tinta são necessários
+# Sabendo que 1 litro pinta 2m²
 # --------------------------------------------------
-# Escreva aqui a lógica do desafio
 
-# TODO:
-# utilzando a biblioteca math, arredondar o valor para cima, pois não podemos comprar meio litro de tinta
-# Dica: para arredondar um número para cima, podemos utilizar a função math.ceil() que arredonda um número para o próximo inteiro mais próximo. Por exemplo, math.ceil(2.3) retorna 3, e math.ceil(2.0) retorna 2.
+# ? Entrada de Dados
+largura = float(input("Digite a largura da parede em metros: "))
+altura = float(input("Digite a altura da parede em metros: "))
 
+# ? Processamento
+area = largura * altura
+litros = area / 2
+litros_arredondados = math.ceil(litros)
+
+# ? Saída de Dados
+print(f"\nÁrea da parede: {area:.2f}m²")
+print(f"Litros necessários: {litros:.2f}L")
+print(f"Você precisará comprar {litros_arredondados} litro(s) de tinta.")
 
