@@ -11,19 +11,16 @@
 # ?
 # ?   Fórmula (Teorema de Pitágoras):
 # ?   h = √(a² + b²)
-# ?
-# ? Dica: use math.hypot(a, b)  ou  math.sqrt(a**2 + b**2)
-# ? ヒント: math.hypot() が一番シンプルです！
 # ? ─────────────────────────────────────────────────────────────
 
 import math
 
-# TODO: leia o valor do cateto A
+cateto_A = float(input("\nDigite o valor do Cateto A: "))
+cateto_B = float(input("Digite o valor do Cateto B: "))
 
-# TODO: leia o valor do cateto B
+hipotenusa = math.hypot(cateto_A, cateto_B)
 
-# TODO: calcule a hipotenusa com math.hypot(a, b)
-
-# TODO: mostre o resultado formatado
+print(f"\nA hypotenusa se baseando no Cateto A '{cateto_A}' e Cateto B '{cateto_B}' é: {hipotenusa:.2f}")
+print("\n")
 
 # * がんばって！🎌

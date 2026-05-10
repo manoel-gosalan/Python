@@ -17,11 +17,18 @@
 # ? ─────────────────────────────────────────────────────────────
 
 import random
+import time
 
-# TODO: crie uma lista com 5 nomes de amigos
+separador = "─" * 40
+lista = ["Manoel", "Lidio", "Gosalan", "Dos", "Santos",]
+sorteio = random.choice(lista)
 
-# TODO: sorteie um nome com random.choice()
-
-# TODO: mostre quem vai pagar o almoço
+print(f"\n{separador}")
+print("Sorteando...")
+time.sleep(3)
+print(f"{separador}")
+print(f"\n{separador}")
+print(f"Após o Sorteio quem ira pagar a conta é: {sorteio}")
+print(f"{separador}")
 
 # * がんばって！🎌

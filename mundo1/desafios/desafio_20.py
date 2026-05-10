@@ -20,11 +20,23 @@
 # ? ─────────────────────────────────────────────────────────────
 
 import random
-
-# TODO: crie uma lista com 5 nomes de amigos
-
-# TODO: embaralhe a lista com random.shuffle()
+import time
+separador = "─" * 40
+lista = ["Manoel", "Lidio", "Gosalan", "Dos", "Santos"]
+random.shuffle(lista)
 
 # TODO: mostre a ordem de apresentação
+print(f"\n{separador}")
+print("Sorteando os Alunos...")
+print(separador)
+time.sleep(5)
+print(f"\n{separador}")
+print("Apos o sorteio dos Alunos a apresenatação será feita na seguinte ordem: ")
+print(separador)
+print(f"\n{lista}")
+print(f"\n{separador}\n")
+
+
+
 
 # * がんばって！🎌

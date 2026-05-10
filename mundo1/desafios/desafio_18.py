@@ -22,14 +22,21 @@
 
 import math
 
-# TODO: leia o ângulo em graus
+sep = "─" * 40
 
-# TODO: converta para radianos com math.radians()
+graus = float(input("Digite o angulo (em graus): "))
+radianos = math.radians(graus)
 
-# TODO: calcule e mostre o seno
+seno = math.sin(radianos)
+cosseno = math.cos(radianos)
+tangente = math.tan(radianos)
 
-# TODO: calcule e mostre o cosseno
-
-# TODO: calcule e mostre a tangente
+print(f"\n{sep}")
+print(f"  Angulo: {graus} graus  ({radianos:.4f} rad)")
+print(sep)
+print(f"  sen({graus})  =  {seno:+.4f}")
+print(f"  cos({graus})  =  {cosseno:+.4f}")
+print(f"  tan({graus})  =  {tangente:+.4f}")
+print(sep)
 
 # * がんばって！🎌

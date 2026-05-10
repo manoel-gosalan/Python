@@ -21,18 +21,30 @@
 
 import math
 
-# TODO: leia o número do usuário
+numero = int(input("Digite um valor: "))
 
-# TODO: calcule e mostre o antecessor
+antecessor = numero - 1
+sucessor = numero + 1
+triplo = numero * 3
+dobro = numero * 2
+raiz = math.sqrt(numero)
+par_impar = numero % 2
 
-# TODO: calcule e mostre o sucessor
+print(f"\nO antecessor de {numero} é: {antecessor} ")
 
-# TODO: calcule e mostre o dobro
+print(f"O sucessor de {numero} é: {sucessor}")
 
-# TODO: calcule e mostre o triplo
+print(f"O dobro de {numero} é: {dobro}")
 
-# TODO: calcule e mostre a raiz quadrada
+print(f"O triplo de {numero} é: {triplo}")
 
-# TODO: verifique e mostre se é par ou ímpar (dica: use % 2)
+print(f"A raiz quadrada de {numero} é: {raiz:.2f}")
+
+# * % 2 retorna 0 se par, 1 se ímpar
+if par_impar == 0:
+    print(f"Analisando o numero {numero} ele é: PAR")
+else:
+    print(f"Analisando o numero {numero} ele é: IMPAR")
+
 
 # * がんばって！🎌
