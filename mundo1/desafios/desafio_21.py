@@ -21,15 +21,45 @@
 # ? Dica: combine random.shuffle() com indexação da lista
 # ? ヒント: shuffle() してから lista[0] で最初の曲を取れます！
 # ? ─────────────────────────────────────────────────────────────
-
+import pyglet
+from pathlib import Path
 import random
 
-# TODO: crie uma lista com pelo menos 5 nomes de músicas (.mp3)
+separador = "─" * 40
 
-# TODO: embaralhe a playlist com random.shuffle()
+playlist = [
+Path (__file__).parent / "music" / "auracosmica.mp3",
+Path (__file__).parent / "music" / "crystallize.mp3",
+Path (__file__).parent / "music" / "roundtable-rival.mp3",
+Path (__file__).parent / "music" / "slide.mp3"
+]
 
-# TODO: mostre a ordem completa da playlist embaralhada
+aleatorio = playlist.copy()
 
-# TODO: mostre qual música vai tocar primeiro (lista[0])
+random.shuffle(aleatorio)
+
+print(f"\n{separador}")
+print("Playlist original:")
+print(separador)
+print(f"  1. {playlist[0].name}")
+print(f"  2. {playlist[1].name}")
+print(f"  3. {playlist[2].name}")
+print(f"  4. {playlist[3].name}")
+
+print(f"\n{separador}")
+print("Playlist embaralhada:")
+print(separador)
+print(f"  1. {aleatorio[0].name}")
+print(f"  2. {aleatorio[1].name}")
+print(f"  3. {aleatorio[2].name}")
+print(f"  4. {aleatorio[3].name}")
+
+print(f"\n{separador}")
+print(f"Tocando agora: {aleatorio[0].name}")
+print(separador)
+
+musica = pyglet.media.load(str(aleatorio[0]))
+musica.play()
+pyglet.app.run()
 
 # * がんばって！🎌
