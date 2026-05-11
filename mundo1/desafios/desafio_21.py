@@ -24,6 +24,7 @@
 import pyglet
 from pathlib import Path
 import random
+import time
 
 separador = "─" * 40
 
@@ -60,6 +61,6 @@ print(separador)
 
 musica = pyglet.media.load(str(aleatorio[0]))
 musica.play()
-pyglet.app.run()
+time.sleep(musica.duration)
 
 # * がんばって！🎌
