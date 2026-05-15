@@ -19,9 +19,14 @@
 > This is where real proof lives.
 
 ### 🔹 python-mundo1-exercises
-- Concepts: variables, conditionals, input/output
-- Status: 🟢 In progress
+- Concepts: variables, operators, strings, slicing, conditionals
+- Status: ✅ Completed — May 2026
 - Path: `/python-mundo1`
+
+### 🔹 python-mundo2-exercises
+- Concepts: loops (for / while), lists
+- Status: 🔄 In progress
+- Path: `/python-mundo2`
 
 ---
 
@@ -45,7 +50,8 @@
 
 ### Phase 0 — Foundations (2026)
 - Git & GitHub ✅
-- Python basics 🔄
+- Python Mundo 1 (basics) ✅
+- Python Mundo 2 (loops) 🔄
 - English 🔄
 
 ### Phase 1 — Backend Core
@@ -73,9 +79,9 @@
 ## 📊 Progress Tracker
 
 | Period | Focus | Status |
-|--------|------|--------|
-| May–Jul 2026 | Python basics | 🔄 |
-| Aug–Oct 2026 | Python + MySQL | ⏳ |
+|--------|-------|--------|
+| May–Jul 2026 | Python basics (Mundo 1) | ✅ Done |
+| Aug–Oct 2026 | Python loops + MySQL | ⏳ |
 | 2027 | Backend + APIs | ⏳ |
 | 2028 | Java + Cloud | ⏳ |
 
@@ -83,6 +89,7 @@
 
 ## 🎯 Goals
 
+- [ ] Complete Python Mundo 2 (loops)
 - [ ] First backend API (2027)
 - [ ] 3 solid portfolio projects
 - [ ] AWS Certification
@@ -104,7 +111,7 @@
 
 - Consistency > intensity
 - Learn by building
-- Code daily
+- No autocomplete, no shortcuts — understand before you type
 - Think in English
 
 ---
