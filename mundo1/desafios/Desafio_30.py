@@ -8,6 +8,13 @@
 # ? Crie um programa que leia um número inteiro
 # ? e mostre na tela se ele é PAR ou ÍMPAR.
 # ? ─────────────────────────────────────────────
+titulo = "Par ou Impar".center(40, "\u2550")
+numero = int(input('Digite um valor: '))
+footer = "\u2550" * 40
 
-# TODO: verificar se número é par ou ímpar
-# NOTE: usar operador %
+print(f'\n{titulo}')
+if numero % 2 == 0:
+    print(f'O numero de {numero} é: PAR')
+else:
+    print(f'O numero {numero} é: IMPAR')
+print(footer)

@@ -14,6 +14,30 @@
 # ? O programa deve informar se o usuário
 # ? venceu ou perdeu.
 # ? ─────────────────────────────────────────────
+from random import randint
 
-# TODO: criar lógica do jogo
-# NOTE: usar random.randint()
+titulo    = " Jogo da Adivinhacao ".center(40, "\u2550")
+separador = "─" * 40
+footer = "\u2550" * 40
+
+jogador = int(input("Digite um numero de 0 a 5: "))
+maquina = randint(0, 5)
+
+print(f"\n{titulo}")
+if jogador < 0 or jogador > 5:
+    print("  Valor invalido! Digite apenas entre 0 e 5.")
+elif jogador == maquina:
+    print(f"  {'Seu numero':<15}: {jogador}")
+    print(f"  {'Maquina':<15}: {maquina}")
+    print(separador)
+    print("  PARABENS! Voce acertou! 🎉")
+    print(separador)
+else:
+    print(f"  {'Maquina':<15}: {maquina}")
+    print(f"  {'Seu numero':<15}: {jogador}")
+    print(separador)
+    print("  Que pena! Tente novamente.")
+print(footer)
+
+
+

@@ -10,9 +10,26 @@
 # ?
 # ? Calcule o preço da passagem:
 # ?
-# ? → R$0,50 por Km para viagens até 200Km
-# ? → R$0,45 para viagens mais longas
+# ? → €0,50 por Km para viagens até 200Km
+# ? → €0,45 para viagens mais longas
 # ? ─────────────────────────────────────────────
 
-# TODO: calcular valor da passagem
-# NOTE: usar if e else
+titulo    = " Custo da Viagem ".center(40, "\u2550")
+separador = "─" * 40
+footer    = "\u2550" * 40
+
+viagem = int(input("Digite a distancia da viagem em km: "))
+
+if viagem <= 200:
+    tarifa = 0.50
+else:
+    tarifa = 0.45
+
+total = viagem * tarifa
+
+print(f"\n{titulo}")
+print(f"  {'Distancia':<18}: {viagem} km")
+print(f"  {'Tarifa por km':<18}: EUR {tarifa:.2f}")
+print(separador)
+print(f"  {'Total da viagem':<18}: EUR {total:.2f}")
+print(footer)
