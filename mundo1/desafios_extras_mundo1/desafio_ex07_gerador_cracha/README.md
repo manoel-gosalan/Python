@@ -8,4 +8,4 @@ Crie um crachá formatado.
 - f-string, formatação visual
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

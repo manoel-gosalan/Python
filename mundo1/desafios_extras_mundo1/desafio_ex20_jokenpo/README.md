@@ -8,4 +8,4 @@ Crie um jogo de pedra, papel ou tesoura.
 - random.choice()
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

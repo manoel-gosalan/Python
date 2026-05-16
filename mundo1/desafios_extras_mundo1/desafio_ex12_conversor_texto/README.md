@@ -8,4 +8,4 @@ Converta textos para diferentes formatos.
 - replace(), join()
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

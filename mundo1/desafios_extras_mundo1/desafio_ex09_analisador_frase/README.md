@@ -8,4 +8,4 @@ Analise uma frase.
 - split(), slicing
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

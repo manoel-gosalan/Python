@@ -8,4 +8,4 @@ Gere usernames automaticamente.
 - slicing, randint
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

@@ -8,4 +8,4 @@ Valide uma senha simples.
 - len(), comparação
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

@@ -8,4 +8,4 @@ Peça peso e altura e calcule o IMC.
 - float(), operadores aritméticos
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

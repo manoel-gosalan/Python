@@ -8,4 +8,4 @@ Peça nome, idade e cidade do usuário e exiba uma apresentação formatada.
 - input(), f-string, print()
 
 ## Status
-⬜ Feito
+ Feito

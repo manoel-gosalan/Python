@@ -8,4 +8,4 @@ Crie e embaralhe uma playlist.
 - listas, shuffle
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

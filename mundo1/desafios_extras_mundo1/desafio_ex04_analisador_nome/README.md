@@ -8,4 +8,4 @@ Analise um nome completo.
 - len(), upper(), lower()
 
 ## Status
-⬜ Não iniciado
+Não iniciado

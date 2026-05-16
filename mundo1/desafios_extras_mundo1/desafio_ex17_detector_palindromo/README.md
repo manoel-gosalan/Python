@@ -8,4 +8,4 @@ Detecte palíndromos.
 - slicing[::-1]
 
 ## Status
-⬜ Não iniciado
+Não iniciado

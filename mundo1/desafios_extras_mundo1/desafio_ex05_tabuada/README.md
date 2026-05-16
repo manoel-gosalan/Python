@@ -8,4 +8,4 @@ Mostre a tabuada de um número.
 - int(), operadores
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

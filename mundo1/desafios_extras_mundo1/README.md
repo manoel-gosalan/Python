@@ -1,5 +1,5 @@
 
-# 🐍 Desafios Extras — Mundo 1 Python
+#  Desafios Extras — Mundo 1 Python
 
 Baseado no curso do Gustavo Guanabara.
 
@@ -15,5 +15,3 @@ Consolidar:
 - listas
 - condicionais
 - organização de projeto
-
-Bons estudos 🚀

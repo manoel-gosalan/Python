@@ -8,4 +8,4 @@ Embaralhe jogadores e divida em times.
 - listas, random.shuffle()
 
 ## Status
-⬜ Não iniciado
+Não iniciado

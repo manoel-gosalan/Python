@@ -8,4 +8,4 @@ Converta Celsius para Fahrenheit e Kelvin.
 - float(), operadores
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

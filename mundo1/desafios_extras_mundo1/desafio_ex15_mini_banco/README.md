@@ -8,4 +8,4 @@ Simule um extrato bancário.
 - listas de tuplas
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

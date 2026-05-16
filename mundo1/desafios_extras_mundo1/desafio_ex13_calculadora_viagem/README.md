@@ -8,4 +8,4 @@ Calcule custo de viagem.
 - float(), operadores
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

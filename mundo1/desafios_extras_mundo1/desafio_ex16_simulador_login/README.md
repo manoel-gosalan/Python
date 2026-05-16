@@ -8,4 +8,4 @@ Crie um login simples.
 - if/elif/else
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

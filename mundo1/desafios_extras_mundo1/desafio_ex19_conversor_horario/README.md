@@ -8,4 +8,4 @@ Converta segundos em horas/minutos/segundos.
 - // e %
 
 ## Status
-⬜ Não iniciado
+ Não iniciado

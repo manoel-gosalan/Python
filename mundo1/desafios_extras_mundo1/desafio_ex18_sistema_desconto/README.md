@@ -8,4 +8,4 @@ Calcule desconto de produto.
 - porcentagem
 
 ## Status
-⬜ Não iniciado
+ Não iniciado
