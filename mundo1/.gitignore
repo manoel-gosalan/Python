@@ -1,0 +1,5 @@
+# IDEs e editores
+.idea/
+.vscode/
+*.pyc
+__pycache__/
