@@ -22,4 +22,34 @@
 # Use .split() para separar as palavras em uma lista
 # Use um loop for e cheque se cada char esta em "aeiouAEIOU" para contar vogais
 # Use max(palavras, key=len) para achar a palavra mais longa
+titulo = " Relatório da Frase ".center(40, "\u2550")
+frase = input("Digite uma frase: ")
 
+
+palavras = frase.split()
+total_palavras = len(frase)
+
+so_letras = frase.replace(" ", "-")
+total_letras = len(so_letras)
+
+# 3. Vogais - loop verificando cada caractere
+total_vogais = 0
+for letra in "aiueo":
+    if letra.lower() in "aeiou":
+        total_vogais += 1
+
+# 4. Palavra mais longa - max com key=len (mágica do Python! ✨)
+mais_longa = max(frase, key=len)
+
+# 5. Upper e lower - direto e simples
+em_maiuscula = frase.upper()
+em_minuscula = frase.lower()
+
+# Relatório final
+print(f"\n{titulo}")
+print(f"Palavras:          {total_palavras}")
+print(f"Letras:            {total_letras}")
+print(f"Vogais:            {total_vogais}")
+print(f"Palavra mais longa: {mais_longa}")
+print(f"Maiúsculas:        {em_maiuscula}")
+print(f"Minúsculas:        {em_minuscula}")

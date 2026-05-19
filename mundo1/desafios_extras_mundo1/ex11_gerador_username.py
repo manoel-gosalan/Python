@@ -1,14 +1,14 @@
 # * =============================================================
-# * EXERCICIO 11 - GERADOR DE USERNAME
-# * Nivel: Iniciante | Linguagem: Python
+# * EXERCÍCIO 11 - GERADOR DE USERNAME
+# * Nível: Iniciante | Linguagem: Python
 # * =============================================================
-# * ユーザー名 (yuza mei) = username / nome de usuario
+# * ユーザー名 (yuza mei) = username / nome de usuário
 # * =============================================================
 
 
 # ? ENUNCIADO:
-# Crie um programa que gere automaticamente 5 sugestoes de
-# username para o usuario se cadastrar em uma plataforma.
+# Crie um programa que gere automaticamente 5 sugestões de
+# username para o usuario se cadastrar numa plataforma.
 
 
 # ! O PROGRAMA DEVE:
@@ -54,7 +54,39 @@
 # Para inverter o ano: str(ano)[::-1]
 # Use f-strings para montar os usernames: f"{partes[0][0]}{partes[-1]}{ano}"
 
+import random
+import time
 
-# ---------------------------------------------------------------
-# SEU CODIGO COMEÇA AQUI
-# ---------------------------------------------------------------
+titulo = " Gerador de Username ".center(40, "═")
+separador = "─" * 40
+
+nome_completo = input("Digite seu nome completo: ").lower()
+ano = input("Ano de nascimento: ")
+
+partes = nome_completo.split()
+primeiro_nome = partes[0]
+sobrenome = partes[-1]
+
+numero_aleatorio = random.randint(10, 999)
+ano_invertido = ano[::-1]
+
+# === As 5 sugestões ===
+s1 = f"{primeiro_nome[0]}{sobrenome}{ano}"
+s2 = f"{primeiro_nome}_{numero_aleatorio}"
+s3 = f"{sobrenome}_{primeiro_nome[:3]}"
+s4 = f"{''.join(partes)}"
+s5 = f"{primeiro_nome[:2]}{sobrenome}{ano_invertido}"
+
+print(f"\n{titulo}")
+print("Analisando seu nome...")
+time.sleep(1)
+print("Gerando usernames criativos... ")
+time.sleep(1)
+print(separador)
+print("=== Sugestões de Username ===")
+print(f"1. {s1}")
+print(f"2. {s2}")
+print(f"3. {s3}")
+print(f"4. {s4}")
+print(f"5. {s5}")
+print(separador)
