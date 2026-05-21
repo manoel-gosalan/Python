@@ -5,7 +5,6 @@
 # * テキスト変換 (tekisuto henkan) = conversao de texto
 # * =============================================================
 
-
 # ? ENUNCIADO:
 # Crie um programa que funcione como uma ferramenta de transformacao
 # de texto, com varios modos de conversao que o usuario pode escolher.
@@ -53,5 +52,48 @@
 
 
 # ---------------------------------------------------------------
-# SEU CODIGO COMEÇA AQUI
+# O SEU CÓDIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+
+while True:
+    print("\n=== Seleção de ação ===")
+    print("1 - MAIUSCULAS")
+    print("2 - minusculas")
+    print("3 - Capitalizado")
+    print("4 - Invertido")
+    print("5 - Snake_case")
+    print("6 - Contar chars")
+    print("7 - Sair")
+
+    escolha = input("\nEscolha: ")
+
+    if escolha == "7":
+        print("Muito bom, té logo! すごくよかった、またね！")
+        break  # ← break SÓ AQUI, no sair
+
+    elif escolha not in ["1", "2", "3", "4", "5", "6"]:
+        print("Opção inválida, tente outra vez! もう一度！(mou ichido = de novo!)")
+        continue  # ← pula pro próximo ciclo do loop
+
+    # Pede o texto UMA vez, fora dos ifs
+    frase = input("Digite a frase: ")
+
+    if escolha == "1":
+        print(f"Resultado: {frase.upper()}")
+
+    elif escolha == "2":
+        print(f"Resultado: {frase.lower()}")
+
+    elif escolha == "3":
+        print(f"Resultado: {frase.title()}")
+
+    elif escolha == "4":
+        print(f"Resultado: {frase[::-1]}")
+
+    elif escolha == "5":
+        print(f"Resultado: {frase.replace(' ', '_').lower()}")
+
+    elif escolha == "6":
+        sem_espaco = frase.replace(" ", "")
+        print(f"Com espaços:    {len(frase)} caracteres")
+        print(f"Sem espaços:    {len(sem_espaco)} caracteres")
