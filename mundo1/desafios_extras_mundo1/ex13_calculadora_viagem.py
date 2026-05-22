@@ -30,13 +30,6 @@
 
 
 # ? EXEMPLO DE ENTRADA E SAIDA ESPERADA:
-# Input:
-#   Distancia (km): 350
-#   Consumo do carro (km/l): 12
-#   Preco do combustivel (R$/l): 5.89
-#   Velocidade media (km/h): 80
-#   Seu orcamento para combustivel (R$): 150
-#
 # Output:
 #   === Resultado ===
 #   Combustivel necessario: 29.17 litros
@@ -56,3 +49,39 @@
 # ---------------------------------------------------------------
 # SEU CODIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+separador = "─" * 40
+fim = "\u2250" * 40
+
+distancia = float(input("Digite a distancia que deseja percorrer: "))
+consumo = float(input("Digite a distancia media que seu carro faz por litro: "))
+valor_combustivel = float(input("Valor atual do combustivel: "))
+velocidade_media = int(input("Velocidade media: "))
+orcamento_final = float(input("Digite o valor do seu orçamento final: "))
+
+if distancia <= 0:
+    print("A distancia não pode ser zero ou negativa.")
+elif consumo <= 0:
+    print("O consumo não pode ser zero ou negativo.")
+elif valor_combustivel <= 0:
+    print("O valor do combustivel não pode ser zero ou negativo.")
+elif velocidade_media <= 0:
+    print("A velocidade não pode ser zero ou negativa.")
+elif orcamento_final <= 0:
+    print("O orçamento não pode ser zero ou negativo.")
+else:
+
+    litros_nescessario = distancia / consumo
+    custo_total = litros_nescessario * valor_combustivel
+    tempo_total_horas = distancia / velocidade_media
+    horas = int(tempo_total_horas)
+    minutos = int((tempo_total_horas - horas) * 60)
+
+    print(f"\n{'=== Resultado ==='}")
+    print(f"Combustivel nescessario : {litros_nescessario:.2f} litros")
+    print(f"Custo total da viagem: € {custo_total:.2f}")
+    print(f"Tempo de viagem: {horas} hora e {minutos} minutos")
+
+    if custo_total < orcamento_final:
+        print(f"Sobra um total de € {(orcamento_final - custo_total):.2f}")
+    else:
+        print(f"Falta € {(orcamento_final - custo_total):.2f}")
