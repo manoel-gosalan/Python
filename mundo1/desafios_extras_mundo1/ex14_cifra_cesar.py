@@ -64,3 +64,38 @@
 # ---------------------------------------------------------------
 # SEU CODIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+# * =============================================================
+# * EXERCICIO 14 - CIFRA DE CESAR
+# * 暗号 (angou) = cifra / codigo secreto
+# * =============================================================
+
+# 入力 (nyuuryoku) = entrada de dados
+mensagem     = input("Mensagem: ")
+deslocamento = int(input("Deslocamento: "))
+opcao        = input("(1) Codificar  (2) Decodificar: ")
+
+# Se for decodificar, invertemos o deslocamento
+# デコード = decode | エンコード = encode
+if opcao == "2":
+    deslocamento = -deslocamento  # truque: só inverte o sinal!
+
+resultado = ""  # aqui vamos construindo a resposta letra por letra
+
+# 繰り返し (kurikaeshi) = repetição / loop
+for letra in mensagem:
+
+    if letra.isupper():  # Maiúscula? Faixa ASCII 65-90
+        # Zera pro alfabeto (A=0), desloca, faz o wrap, volta pro ASCII
+        nova = chr((ord(letra) - 65 + deslocamento) % 26 + 65)
+        resultado += nova
+
+    elif letra.islower():  # Minúscula? Faixa ASCII 97-122
+        nova = chr((ord(letra) - 97 + deslocamento) % 26 + 97)
+        resultado += nova
+
+    else:
+        # Número, espaço, símbolo? Deixa como está!
+        # 変更なし (henkou nashi) = sem alteração
+        resultado += letra
+
+print(f"Resultado: {resultado}")
