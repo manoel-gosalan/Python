@@ -1,126 +1,187 @@
-# 🐍 Backend Engineering Journey
+# Backend Developer Journey
 
-> From zero to Backend Engineer (Python → Java → Cloud)  
-> Target: 🇯🇵 Japan Tech Market — April 2029
+From zero to Backend Development
+Focused on Python → Java → Cloud Engineering
 
----
-
-## 🚀 Current Status
-
-- 📍 Location: Portugal
-- 💻 Focus: Backend Development (Python)
-- 🎌 Japanese: Hiragana ✅ | Katakana ✅ | Target: JLPT N3
-- 📅 Started: May 2026
+**Target:** 🇯🇵 Japan Tech Market — April 2029
 
 ---
 
-## 📌 Active Projects (MOST IMPORTANT)
+# 🚀 Current Status
 
-> This is where real proof lives.
-
-### 🔹 python-mundo1-exercises
-- Concepts: variables, operators, strings, slicing, conditionals
-- Status: ✅ Completed — May 2026
-- Path: `/python-mundo1`
-
-### 🔹 python-mundo2-exercises
-- Concepts: loops (for / while), lists
-- Status: 🔄 In progress
-- Path: `/python-mundo2`
+* 📍 Location: Portugal
+* 💻 Focus: Backend Development with Python
+* 🎌 Japanese: Hiragana ✅ | Katakana ✅ | Target: JLPT N3
+* 📅 Started Programming: May 2026
 
 ---
 
-## 🧠 Tech Stack (Current → Target)
+# 📌 Active Projects
 
-### Current
-- Python
-- Git & GitHub
-- MySQL (learning)
+Projects are the practical proof of my learning journey.
 
-### Target (2029)
-- Python (Backend / APIs)
-- Java + Spring Boot
-- PostgreSQL
-- Docker
-- AWS
+## python-mundo1-exercises
 
----
+### Concepts
 
-## 🗺️ Roadmap
+* variables
+* operators
+* strings
+* slicing
+* conditionals
 
-### Phase 0 — Foundations (2026)
-- Git & GitHub ✅
-- Python Mundo 1 (basics) ✅
-- Python Mundo 2 (loops) 🔄
-- English 🔄
+### Status
 
-### Phase 1 — Backend Core
-- Python advanced (OOP)
-- FastAPI
-- Databases (MySQL → PostgreSQL)
+✅ Completed — May 2026
 
-### Phase 2 — Professional Backend
-- Authentication (JWT, OAuth)
-- Docker
-- API design
+### Path
 
-### Phase 3 — Enterprise Stack
-- Java + Spring Boot
-- Microservices
-- Testing
-
-### Phase 4 — Cloud & Scaling
-- AWS
-- CI/CD
-- System Design
+```txt
+/python-mundo1
+```
 
 ---
 
-## 📊 Progress Tracker
+## python-mundo2-exercises
 
-| Period | Focus | Status |
-|--------|-------|--------|
-| May–Jul 2026 | Python basics (Mundo 1) | ✅ Done |
-| Aug–Oct 2026 | Python loops + MySQL | ⏳ |
-| 2027 | Backend + APIs | ⏳ |
-| 2028 | Java + Cloud | ⏳ |
+### Concepts
 
----
+* loops (`for` / `while`)
+* lists
+* validation systems
 
-## 🎯 Goals
+### Status
 
-- [ ] Complete Python Mundo 2 (loops)
-- [ ] First backend API (2027)
-- [ ] 3 solid portfolio projects
-- [ ] AWS Certification
-- [ ] JLPT N3
-- [ ] Backend job in Japan 🇯🇵
+🔄 In Progress
+
+### Path
+
+```txt
+/python-mundo2
+```
 
 ---
 
-## 📚 Learning Resources
+# 🧠 Tech Stack
 
-- Curso em Vídeo
-- FastAPI Docs
-- Real Python
-- Spring Guides
+## Current
 
----
+* Python
+* Git & GitHub
+* MySQL (learning)
 
-## 💡 Principles
+## Target Stack (2029)
 
-- Consistency > intensity
-- Learn by building
-- No autocomplete, no shortcuts — understand before you type
-- Think in English
-
----
-
-## 📫 Contact
-
-- GitHub: @manoel-gosalan
-- LinkedIn: Manoel Gosalan
+* Python Backend
+* FastAPI
+* Java + Spring Boot
+* PostgreSQL
+* Docker
+* AWS
 
 ---
 
-> "A journey of a thousand miles begins with a single commit."
+# 🛠️ Currently Building
+
+* Python terminal systems
+* Authentication logic
+* Input validation systems
+* Backend foundations
+* Logic and problem-solving skills
+
+---
+
+# 🗺️ Roadmap
+
+## Phase 0 — Foundations (2026)
+
+* Git & GitHub ✅
+* Python Mundo 1 ✅
+* Python Mundo 2 🔄
+* English 🔄
+
+---
+
+## Phase 1 — Backend Core
+
+* Advanced Python
+* OOP
+* FastAPI
+* Databases
+* SQL fundamentals
+
+---
+
+## Phase 2 — Professional Backend
+
+* Authentication (JWT / OAuth)
+* Docker
+* API design
+* Clean code
+* Project architecture
+
+---
+
+## Phase 3 — Enterprise Stack
+
+* Java + Spring Boot
+* Testing
+* REST APIs
+* Microservices fundamentals
+
+---
+
+## Phase 4 — Cloud & Scaling
+
+* AWS
+* CI/CD
+* System Design
+* Scalable backend systems
+
+---
+
+# 📊 Progress Tracker
+
+| Period         | Focus              | Status |
+| -------------- | ------------------ | ------ |
+| May – Jul 2026 | Python foundations | ✅      |
+| Aug – Oct 2026 | Loops + MySQL      | 🔄     |
+| 2027           | Backend + APIs     | ⏳      |
+| 2028           | Java + Cloud       | ⏳      |
+
+---
+
+# 🎯 Goals
+
+* [ ] Complete Python Mundo 2
+* [ ] Build first backend API
+* [ ] Create 3 solid portfolio projects
+* [ ] Learn Docker fundamentals
+* [ ] Achieve JLPT N3
+* [ ] Work as Backend Developer in Japan 🇯🇵
+
+---
+
+# 📚 Learning Resources
+
+* Curso em Vídeo
+* FastAPI Documentation
+* Real Python
+* Spring Guides
+
+---
+
+# 💡 Principles
+
+* Consistency over intensity
+* Learn by building
+* Focus on fundamentals
+* Understand first, then optimize
+* Think in English
+
+---
+
+# 📫 Contact
+
+* GitHub: @manoel-gosalan
+* LinkedIn: Manoel Gosalan
