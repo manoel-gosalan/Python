@@ -96,7 +96,7 @@ while True:
         print("Opção inválida! もう一度！")
         continue
 
-    # ─────────────────────────
+    # ─────────────────.────────
     elif escolha == "1":
         print("\n==== Cadastro ====")
         while True:

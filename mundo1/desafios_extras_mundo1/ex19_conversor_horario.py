@@ -78,3 +78,59 @@
 # ---------------------------------------------------------------
 # SEU CODIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+cidades = [
+    ("Brasilia",  "BRT",  0),
+    ("Londres",   "GMT",  3),
+    ("Paris",     "CET",  4),
+    ("Moscou",    "MSK",  6),
+    ("Dubai",     "GST",  7),
+    ("Toquio",    "JST", 12),
+    ("Nova York", "EST", -2),
+    ("LA",        "PST", -5),
+]
+
+while True:
+    horario = input("Horario em Brasilia (HH:MM): ")
+
+    if ":" not in horario:
+        print("Formato inválido! Use HH:MM")
+        continue
+
+    partes = horario.split(":")
+
+    if len(partes) != 2:
+        print("Formato inválido! Use HH:MM")
+        continue
+
+    if not partes[0].isdigit() or not partes[1].isdigit():
+        print("Use apenas numeros!")
+        continue
+
+    hora   = int(partes[0])
+    minuto = int(partes[1])
+
+    if not (0 <= hora <= 23):
+        print("Hora deve ser entre 0 e 23!")
+        continue
+
+    if not (0 <= minuto <= 59):
+        print("Minuto deve ser entre 0 e 59!")
+        continue
+
+    break
+
+print("\n=== Horarios pelo Mundo ===")
+
+for nome, abrev, diferenca in cidades:
+    hora_conv = hora + diferenca
+
+    dia_info = ""
+    if hora_conv >= 24:
+        hora_conv -= 24
+        dia_info = "(+1 dia)"
+    elif hora_conv < 0:
+        hora_conv += 24
+        dia_info = "(-1 dia)"
+
+    horario_formatado = f"{hora_conv:02d}:{minuto:02d}"
+    print(f"{nome:<10} ({abrev}): {horario_formatado}  {dia_info}")

@@ -1,80 +1,100 @@
-# * =============================================================
-# * EXERCICIO 20 - JOKENPO (PEDRA, PAPEL E TESOURA)
-# * Nivel: Intermediario | Linguagem: Python
-# * =============================================================
-# * じゃんけんぽん (jankenpon) = pedra papel tesoura em japones!
-# * =============================================================
+import random
 
+# =============================================================
+# CORES - ANSI escape codes
+# =============================================================
+VERDE    = "\033[92m"   # jogador
+AZUL     = "\033[94m"   # computador
+AMARELO  = "\033[93m"   # vitória / números positivos
+VERMELHO = "\033[91m"   # derrota / números negativos
+CIANO    = "\033[96m"   # neutro / empate
+RESET    = "\033[0m"    # volta ao normal — SEMPRE usar no fim!
 
-# ? ENUNCIADO:
-# Crie uma versao completa do classico jogo Pedra, Papel e Tesoura
-# com placar, rodadas e relatorio de estatisticas ao final.
+# =============================================================
 
+print(f"{CIANO}=== じゃんけんぽん - Pedra, Papel e Tesoura ==={RESET}")
 
-# ! REGRAS DO JOGO:
-# Pedra   vence Tesoura
-# Tesoura vence Papel
-# Papel   vence Pedra
-# Jogadas iguais = empate
+while True:
+    rodadas = int(input("Quantas rodadas deseja jogar? "))
+    if rodadas >= 1:
+        break
+    print(f"{VERMELHO}Digite um número válido (mínimo 1).{RESET}")
 
+opcoes = ["Pedra", "Papel", "Tesoura"]
 
-# ! O PROGRAMA DEVE:
-# TODO: 1. Perguntar quantas RODADAS serao jogadas (minimo 1)
-# TODO: 2. Em cada rodada: pedir a jogada do usuario (1, 2 ou 3)
-# TODO: 3. Gerar a jogada do COMPUTADOR aleatoriamente
-# TODO: 4. Exibir quem ganhou a rodada e POR QUE (ex: "Pedra quebra Tesoura")
-# TODO: 5. Manter e exibir o PLACAR atualizado apos cada rodada
-# TODO: 6. Ao final, exibir RELATORIO COMPLETO com:
-#             - Total de vitorias, derrotas e empates
-#             - Percentual de aproveitamento do usuario
-#             - Declarar o vencedor geral (ou empate)
+vitorias = 0
+derrotas = 0
+empates  = 0
 
+for r in range(1, rodadas + 1):
+    print(f"\n{CIANO}--- Rodada {r} ---{RESET}")
+    print("(1) Pedra  (2) Papel  (3) Tesoura")
 
-# ? EXEMPLO DE ENTRADA E SAIDA ESPERADA:
-# Quantas rodadas? 3
-#
-# --- Rodada 1 ---
-# (1) Pedra  (2) Papel  (3) Tesoura: 1
-# Voce: Pedra | Computador: Tesoura
-# Voce ganhou! Pedra quebra Tesoura!
-# Placar: Voce 1 x 0 Computador
-#
-# --- Rodada 2 ---
-# (1) Pedra  (2) Papel  (3) Tesoura: 2
-# Voce: Papel | Computador: Papel
-# Empate!
-# Placar: Voce 1 x 0 Computador
-#
-# --- Rodada 3 ---
-# (1) Pedra  (2) Papel  (3) Tesoura: 3
-# Voce: Tesoura | Computador: Pedra
-# Computador ganhou! Pedra quebra Tesoura!
-# Placar: Voce 1 x 1 Computador
-#
-# === Resultado Final ===
-# Vitorias: 1 | Derrotas: 1 | Empates: 1
-# Aproveitamento: 33.3%
-# Foi um empate geral!
+    while True:
+        escolha = int(input("Sua jogada: "))
+        if escolha in [1, 2, 3]:
+            break
+        print(f"{VERMELHO}Escolha inválida. Digite 1, 2 ou 3.{RESET}")
 
+    jogador    = opcoes[escolha - 1]
+    computador = random.choice(opcoes)
 
-# * DICAS - ヒント (hint):
-# import random
-# opcoes = ["Pedra", "Papel", "Tesoura"]
-# jogada_pc = random.choice(opcoes)
-#
-# Crie uma funcao para decidir o vencedor da rodada:
-#   def verificar_vencedor(jogador, computador):
-#       if jogador == computador:
-#           return "empate"
-#       vitorias = {"Pedra": "Tesoura", "Tesoura": "Papel", "Papel": "Pedra"}
-#       if vitorias[jogador] == computador:
-#           return "jogador"
-#       return "computador"
-#
-# Calculo do aproveitamento:
-#   aproveitamento = (vitorias / total_rodadas) * 100
+    # Verde pro jogador, azul pro computador
+    print(f"{VERDE}Você: {jogador}{RESET} | {AZUL}Computador: {computador}{RESET}")
 
+    if jogador == computador:
+        print(f"{CIANO}Empate!{RESET}")
+        empates += 1
 
-# ---------------------------------------------------------------
-# SEU CODIGO COMEÇA AQUI
-# ---------------------------------------------------------------
+    elif (jogador == "Pedra"   and computador == "Tesoura") or \
+         (jogador == "Tesoura" and computador == "Papel")   or \
+         (jogador == "Papel"   and computador == "Pedra"):
+
+        vitorias += 1
+        print(f"{VERDE}Você ganhou! {RESET}")
+
+        if jogador == "Pedra":
+            print(f"{VERDE}Pedra quebra Tesoura!{RESET}")
+        elif jogador == "Tesoura":
+            print(f"{VERDE}Tesoura corta Papel!{RESET}")
+        else:
+            print(f"{VERDE}Papel cobre Pedra!{RESET}")
+
+    else:
+        derrotas += 1
+        print(f"{VERMELHO}Computador ganhou!{RESET}")
+
+        if computador == "Pedra":
+            print(f"{VERMELHO}Pedra quebra Tesoura!{RESET}")
+        elif computador == "Tesoura":
+            print(f"{VERMELHO}Tesoura corta Papel!{RESET}")
+        else:
+            print(f"{VERMELHO}Papel cobre Pedra!{RESET}")
+
+    # Placar: vitórias em amarelo, derrotas em vermelho
+    print(f"Placar: {VERDE}Você {AMARELO}{vitorias}{RESET} x {VERMELHO}{derrotas}{RESET} {AZUL}Computador{RESET}")
+
+# Relatório final
+print(f"\n{CIANO}=== Resultado Final ==={RESET}")
+print(
+    f"Vitórias: {AMARELO}{vitorias}{RESET} | "
+    f"Derrotas: {VERMELHO}{derrotas}{RESET} | "
+    f"Empates: {CIANO}{empates}{RESET}"
+)
+
+aproveitamento = (vitorias / rodadas) * 100
+
+# Cor do aproveitamento muda conforme o resultado
+if aproveitamento >= 50:
+    cor_aprov = AMARELO
+else:
+    cor_aprov = VERMELHO
+
+print(f"Aproveitamento: {cor_aprov}{aproveitamento:.1f}%{RESET}")
+
+if vitorias > derrotas:
+    print(f"{VERDE}Você foi o grande vencedor! {RESET}")
+elif derrotas > vitorias:
+    print(f"{VERMELHO}O computador venceu! {RESET}")
+else:
+    print(f"{CIANO}Foi um empate geral!{RESET}")

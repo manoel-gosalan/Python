@@ -5,7 +5,6 @@
 # * 割引システム (waribiki shisutemu) = sistema de desconto
 # * =============================================================
 
-
 # ? ENUNCIADO:
 # Crie um sistema de calculo de preco para uma loja que aplica
 # descontos progressivos com base no valor total da compra
@@ -74,3 +73,57 @@
 # ---------------------------------------------------------------
 # SEU CODIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+itens = []
+
+# COLETA DOS ITENS
+while True:
+    nome = input("Nome do item (ou 'fim'): ")
+
+    if nome.lower() == "fim":
+        break
+
+    preco = float(input(f"Preco de {nome}: R$ "))
+
+    if preco <= 0:
+        print("Preco invalido! Digite um valor maior que zero.")
+        continue
+
+    itens.append({"nome": nome, "preco": preco})
+    print(f"Produto '{nome}' cadastrado com sucesso!")
+
+# SUBTOTAL
+subtotal = 0
+for item in itens:
+    subtotal += item["preco"]
+
+# DESCONTO POR VALOR
+if subtotal < 100:
+    percentual = 0
+elif subtotal < 300:
+    percentual = 5
+elif subtotal < 500:
+    percentual = 10
+elif subtotal < 1000:
+    percentual = 15
+else:
+    percentual = 20
+
+# VIP
+cliente_vip = input("Cliente VIP? (s/n): ").lower()
+if cliente_vip == "s":
+    percentual += 5
+
+# CALCULO FINAL
+valor_desconto = subtotal * (percentual / 100)
+total_final = subtotal - valor_desconto
+
+# CUPOM
+print("\n=== Cupom Fiscal ===")
+for item in itens:
+    nome_formatado = item["nome"].ljust(20, ".")
+    print(f"{nome_formatado} R$ {item['preco']:.2f}")
+
+print(f"\nSubtotal: R$ {subtotal:.2f}")
+print(f"Desconto aplicado ({percentual}%): - R$ {valor_desconto:.2f}")
+print(f"TOTAL: R$ {total_final:.2f}")
+

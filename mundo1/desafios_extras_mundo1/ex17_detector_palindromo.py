@@ -1,5 +1,5 @@
 # * =============================================================
-# * EXERCICIO 17 - DETECTOR DE PALINDROMO
+# * EXERCICIO 17 - DETETOR DE PALINDROMO
 # * Nivel: Intermediario | Linguagem: Python
 # * =============================================================
 # * 回文 (kaimon) = palindromo (palavra que le igual dos dois lados)
@@ -9,13 +9,13 @@
 # ? ENUNCIADO:
 # Um palindromo e uma palavra ou frase que pode ser lida da mesma
 # forma tanto da esquerda pra direita quanto da direita pra esquerda.
-# Crie um programa robusto que detecte palindromos, ignorando
+# Crie um programa robusto que detete se palindromos, ignorando
 # espacos, pontuacao e diferenca entre maiusculas e minusculas.
 
 
 # ! EXEMPLOS DE PALINDROMOS:
 # Palavras: arara | radar | ana | ovo | civic
-# Frases:   "A sacada da casa"  -> limpo: "asacadadacasa"  -> palindromo
+# Frases: "A sacada da casa" -> limpo: "asacadadacasa" -> palindromo
 #           "Socorram-me subi no onibus em Marrocos" -> palindromo
 
 
@@ -32,15 +32,15 @@
 #   Texto analisado: arara
 #   "arara" E um palindromo!
 #
-# Input:  A sacada da casa
+# Input: A sacada da casa
 #   Texto analisado: asacadadacasa
 #   "A sacada da casa" E um palindromo!
 #
-# Input:  python
+# Input: python
 #   Texto analisado: python
-#   "python" NAO e um palindromo.
+#   "python" NÃO e um palindromo.
 #
-# Input:  sair
+# Input: sair
 #   Encerrando...
 
 
@@ -56,9 +56,46 @@
 # Para limpar o texto (metodo 2 - mais avancado, com regex):
 #   import re
 #   texto_limpo = re.sub(r'[^a-zA-Z]', '', texto).lower()
-#   (obs: o metodo 2 nao funciona bem com acentos - tente o metodo 1 primeiro)
+#   (obs: o metodo 2 não funciona bem com acentos - tente o metodo 1 primeiro)
 
 
 # ---------------------------------------------------------------
 # SEU CODIGO COMEÇA AQUI
 # ---------------------------------------------------------------
+import time
+
+# Função para limpar o texto - テキストをきれいにする
+def limpar_texto(texto):
+    texto_limpo: str = ""
+    for char in texto.lower():
+        if char.isalpha():
+            texto_limpo += char
+    return texto_limpo
+
+while True:
+    entrada = input("\nVerificar palíndromo (ou 'sair'): ").strip()
+
+    if entrada.lower() == "sair":
+        print("Encerrando...")
+        time.sleep(1)
+        print("Até logo! またね！")
+        break
+
+    # Limpa o texto ANTES de comparar
+    texto_limpo = limpar_texto(entrada)
+
+    if not texto_limpo:
+        print("Por favor, digite pelo menos uma palavra!")
+        continue
+
+    # Agora sim, verifica o palíndromo com o texto LIMPO
+    if texto_limpo == texto_limpo[::-1]:
+        print(f"  Texto analisado: {texto_limpo}")
+        print(f'"{entrada}" É um palíndromo! 回文です！')
+    else:
+        print(f"  Texto analisado: {texto_limpo}")
+        print(f'"{entrada}" NÃO é um palíndromo.')
+
+
+
+
