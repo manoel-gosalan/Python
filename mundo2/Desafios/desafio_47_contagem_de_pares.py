@@ -17,7 +17,7 @@
 
 titulo = " Contagem de Pares ".center(30, "\u2550")
 fim = "\u2550" * 30
-
+print(titulo)
 for c in range(0, 50, 2):
     print(str(c).center(30, " "))
 print(fim)

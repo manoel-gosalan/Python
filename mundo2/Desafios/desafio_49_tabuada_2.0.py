@@ -16,3 +16,12 @@
 # TODO Solicitar um número ao usuário.
 # TODO Gerar a tabuada usando FOR.
 # TODO Exibir os resultados organizadamente.
+
+titulo = " Tabuada v2.0 ".center(30, "\u2550")
+fim = "\u2550" * 30
+
+tabuada = int(input("Digite um valor: "))
+print(titulo)
+for t in range(1, 11):
+    print(f"{tabuada:>10} x {t:>2} = {tabuada * t:>2}")
+print(fim)
